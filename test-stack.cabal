@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 122c022ce203b10d322e4bf0260fb73d66ea9b73183666f5656d7ce8e027ad02
+-- hash: 96a872479ac8e8f312230fce039fe524ffbaffc74ae3074025c8ddf135263893
 
 name:           test-stack
 version:        0.1.0.0
@@ -34,6 +34,7 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , parallel
   default-language: Haskell2010
 
 executable test-stack-exe
@@ -45,6 +46,7 @@ executable test-stack-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , parallel
     , test-stack
   default-language: Haskell2010
 
@@ -58,5 +60,6 @@ test-suite test-stack-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , parallel
     , test-stack
   default-language: Haskell2010
